@@ -14,7 +14,7 @@ const ChatRoom = () => {
         const socket = io("http://localhost:8000/")
         setSocket(socket)
         socket.on("connect", () => {
-            console.log(socket.id);
+            // console.log(socket.id);
             socket.emit("joinRoom",location.state.room)
           });
           socket.on("getLatestMessage", newMessage => {
